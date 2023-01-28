@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/ahmadrifai/go/src/go-alodokter'
+go mod init
+make: Leaving directory `/Users/ahmadrifai/go/src/go-alodokter'
+ 

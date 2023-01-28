@@ -1,8 +1,9 @@
 __debug_bin
 vendor
-.vscode
+!.vscode/launch.json
 .idea
 
 go.mod
 go.sum
 volumes
+cmd/rest/__debug_bin
