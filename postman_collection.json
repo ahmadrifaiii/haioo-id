@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "071f0874-1136-48f6-a185-494886771a1a",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3046559"
+	},
+	"item": [
+		{
+			"name": "LOGIN AUTH",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"user_example_satu@mailinator.com\",\n    \"password\":\"examplepassword\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER LIST",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/v1/user/list",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ORDERS LIST",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/v1/order/list",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"order",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRODUCT LIST",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/v1/product/list",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE PRODUCT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"example product 1\",\n    \"sku\":\"expsku001\",\n    \"price\":10000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/product/create",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ORDER DETAIL",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/v1/order/list",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"order",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER DETAIL",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/v1/user/detail/:userId",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"detail",
+						":userId"
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "e574d16c-891b-47c9-a220-84b39973eb69"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
